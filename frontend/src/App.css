@@ -37,6 +37,8 @@ input[type=checkbox]:checked ~ div.curtain__panel--right {
       
 .curtain__panel {
   background: #8B4513;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent); /* Wood texture pattern */
+  background-size: 4px 4px; /* Adjust the size of the texture pattern */
   border: 2pt solid black;
   width: 25%; /* Each panel takes up half the container */
   height: 50vh; /* Used for demo purposes */
@@ -44,6 +46,17 @@ input[type=checkbox]:checked ~ div.curtain__panel--right {
   position: relative; /* Needed to define the z-index */
   z-index: 2; /* Places the panels in front of the prize */
   transition: all 1s ease-out; /* Animates the sliding transition */
+}
+
+.handle {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 10px;
+  background-color: #000000;
+  border-radius: 5px;
 }
 
 .curtain__panel--left {
