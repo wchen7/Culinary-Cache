@@ -16,7 +16,7 @@ import Peas from './images/Peas.jpg';
 import Potato from './images/Potato.jpg';
 import Tomato from './images/Tomato.jpg';
 
-interface pantryArrayStructure {
+export interface pantryArrayStructure {
     name: string;
     type: foodTypes;
     image: string;
@@ -45,6 +45,6 @@ export default function pantryDB (): pantryArrayStructure[] {
     if (localStorage.getItem("pantryArray") === null) {
         localStorage.setItem("pantryArray", JSON.stringify(data));
     }
-    
+
     return data;
 }
