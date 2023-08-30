@@ -23,7 +23,7 @@ interface pantryArrayStructure {
     count: number;
 }
 
-export default function pantryDB (): void {
+export default function pantryDB (): pantryArrayStructure[] {
     const data: pantryArrayStructure[] = [
         {name: 'Broccoli', type: foodTypes.Vegetable, image: Broccoli, count: 0},
         {name: 'Cabbage', type: foodTypes.Vegetable, image: Cabbage, count: 0},
@@ -42,4 +42,9 @@ export default function pantryDB (): void {
         {name: 'Potato', type: foodTypes.Vegetable, image: Potato, count: 0},
         {name: 'Tomato', type: foodTypes.Vegetable, image: Tomato, count: 0},
     ]
+    if (localStorage.getItem("pantryArray") === null) {
+        localStorage.setItem("pantryArray", JSON.stringify(data));
+    }
+    
+    return data;
 }

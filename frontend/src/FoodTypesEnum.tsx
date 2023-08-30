@@ -1,5 +1,6 @@
 export enum foodTypes {
     Fruit,
     Vegetable,
-    Meat
+    Meat,
+    Diary
 }
